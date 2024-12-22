@@ -12,6 +12,7 @@ pipeline {
             steps {
                 
                 sh 'free'
+                sh 'nproc'
                 
             }
         }
