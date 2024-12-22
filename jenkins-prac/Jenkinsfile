@@ -8,8 +8,8 @@ pipeline{
         }
         stage("build"){
             steps{
-                sh 'shell.sh'
                 sh 'chmod 777 shell.sh'
+                sh './shell.sh'
             }
         }
     }
