@@ -6,11 +6,11 @@ pipeline{
                 git branch :'jenkins', url
             }
         }
-        stage("build")
-        steps{
-            sh 'shell.sh'
-            sh 'chmod 777 shell.sh'
+        stage("build"){
+            steps{
+                sh 'shell.sh'
+                sh 'chmod 777 shell.sh'
+            }
         }
-        
     }
 }
