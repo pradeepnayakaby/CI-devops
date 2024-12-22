@@ -1,0 +1,16 @@
+pipeline{
+    agent any
+    stages{
+        stage("git check out"){
+            steps{
+                git branch: 'jenkins ', url: 'https://github.com/pradeepnayakaby/CI-devops.git'
+            }
+        }
+        stage("build"){
+            steps{
+                sh 'shell.sh'
+                sh 'chmod 777 shell.sh'
+            }
+        }
+    }
+}
