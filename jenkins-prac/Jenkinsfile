@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("git check out"){
             steps{
-                git branch :'jenkins', url
+                git branch: 'jenkins ', url: 'https://github.com/pradeepnayakaby/CI-devops.git'
             }
         }
         stage("build"){
