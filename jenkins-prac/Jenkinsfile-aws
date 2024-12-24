@@ -1,0 +1,27 @@
+pipeline{
+    agent {
+        lable:'dev'
+    }
+    tools{
+        JDK 'java-11'
+        maven 'maven'
+    }
+    stages{
+        stage('git check out'){
+            steps{
+                git branch :'main', url ''
+            }
+        }
+        stage('compile'){
+            steps{
+                sh 'mvn compile'
+            }
+        }
+        stage('build'){
+            steps{
+                sh 'mvn build/mvn pakage/mvn install'
+            }
+        }
+        
+    }
+}
